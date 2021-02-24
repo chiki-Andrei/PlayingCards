@@ -17,4 +17,17 @@ public class Game {
         }
     }
 
+    public void deckShuffle(){
+        int temp1;
+        int temp2;
+        String tempString;
+        for(int i=0; i<4000; i++){
+            temp1 = (int) (Math.random()*52);
+            temp2 = (int) (Math.random()*52);
+            tempString = cardDeck[temp1];
+            cardDeck[temp1] = cardDeck[temp2];
+            cardDeck[temp2] = tempString;
+        }
+    }
+
 }
